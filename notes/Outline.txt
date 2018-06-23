@@ -1,0 +1,72 @@
+YATZY OUTLINE
+
+Classes:
+main.js - handles page events
+game.js - game logic
+var.js - init variables
+scores.js - algorithims
+display.js - displays scores
+
+Constants:
+MINVALUE
+MAXVALUE
+FACES
+LOWERSCOREINDEX
+SCORELENGTH
+UPPERBOUND
+BONUS
+FULLHOUSE
+SMALLSTRAIGHT
+YATZY
+ROUNDS
+
+Objects:
+Game - game properties
+Die - die properties
+
+Arrays:
+currRoll - the current roll of the dice
+scoreCount - the score from each die
+scoreCard - scorecard template
+scorecard - argument perameter
+ScoreCard1 - player 1 scorecard
+ScoreCard2 - player 2 scorecard
+displayCard - display scorecard
+Selected1 - player 1 selections
+Selected2 - player 2 selections
+Dice - array of 5 Die objects
+
+Main Methods:
+roll() - handles roll
+moveDie() - changes dieState between active and held
+selectScore() - selects the score on the page
+switchTurn() - switches the turn
+checkGameOver() - checks game over dieState
+gameOver() - initiates game over dieState
+clearTable() - resets both held and active areas
+window.onload - handles roll button event
+
+Game Methods:
+calcRoll() - calculates roll
+calcScoreCard() - calculates scorecard
+getRandomInt() - gets a random integer
+
+Scores Methods:
+calcUpper() - calculates the upper scorecard
+calcUpperTotal() - calculates the upperTotal
+calcScoreCount() - calculates the die count
+calcCurrTotal() - calculates the current roll total
+threeOfKind() - calculates three of a kind
+fourOfKind() - calculates four of a kind
+fullhouse() - calculates fullhouse score
+straight() - calculates straight scores
+straightTest() - tests for small or large straight
+removeDuplicates() - removes duplicate values
+chance() - calculates chance score
+yatzy() - calculates yatzy score
+total() - calculates total for scorecard
+
+Display Methods:
+displayRoll() - displays current roll
+displayScore() - displays game score
+clearFields() - clears the fields after selection

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>Yatzy</title>  
+    <link rel="icon" href="img/dice.png" sizes="any" type="image/png">                 
+    <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />    
+</head>
+<body>
+    <header>
+        <h1>YATZY</h1>                
+    </header>    
+    <main>
+        <p id="count">ROLL: 0 ROUND: 0</p>   
+        <span id="gameOver"></span>             
+        <section id="container">
+            <figure id="active">
+                <figcaption class="caption">Game Table</figcaption>
+            </figure>
+            <figure id="held">
+                <figcaption class="caption">Held</figcaption>
+            </figure>
+            <aside>
+                <figure>
+                    <figcaption>Scorecard</figcaption>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th id="p1">Player 1</th>
+                                <th id="p2">Player 2</th>
+                            </tr>
+                        </thead>            
+                        <tbody>            
+                            <tr>
+                                <td id="a0">Aces</td>
+                                <td id="b0"></td>
+                                <td id="c0"></td>
+                            </tr>
+                            <tr>
+                                <td id="a1">Twos</td>
+                                <td id="b1"></td>
+                                <td id="c1"></td>
+                            </tr>
+                            <tr>
+                                <td id="a2">Threes</td>
+                                <td id="b2"></td>
+                                <td id="c2"></td>
+                            </tr>
+                            <tr>
+                                <td id="a3">Fours</td>
+                                <td id="b3"></td>
+                                <td id="c3"></td>
+                            </tr>
+                            <tr>
+                                <td id="a4">Fives</td>
+                                <td id="b4"></td>
+                                <td id="c4"></td>
+                            </tr>
+                            <tr>
+                                <td id="a5">Sixes</td>
+                                <td id="b5"></td>
+                                <td id="c5"></td>
+                            </tr>                    
+                            <tr>
+                                <td id="a6">Bonus</td>
+                                <td id="b6"></td>
+                                <td id="c6"></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td id="a7">Three of a Kind</td>
+                                <td id="b7"></td>
+                                <td id="c7"></td>
+                            </tr>
+                            <tr>
+                                <td id="a8">Four of a Kind</td>
+                                <td id="b8"></td>
+                                <td id="c8"></td>
+                            </tr>
+                            <tr>
+                                <td id="a9">Full House</td>
+                                <td id="b9"></td>
+                                <td id="c9"></td>
+                            </tr>
+                            <tr>
+                                <td id="a10">Small Straight</td>
+                                <td id="b10"></td>
+                                <td id="c10"></td>
+                            </tr>
+                            <tr>
+                                <td id="a11">Large Straight</td>
+                                <td id="b11"></td>
+                                <td id="c11"></td>
+                            </tr>
+                            <tr>
+                                <td id="a12">Chance</td>
+                                <td id="b12"></td>
+                                <td id="c12"></td>
+                            </tr>
+                            <tr>
+                                <td id="a13">YATZY</td>
+                                <td id="b13"></td>
+                                <td id="c13"></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td id="a14">TOTAL</td>
+                                <td id="b14"></td>
+                                <td id="c14"></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <button type="button" id="roll">Roll Dice</button>                    
+                    <span id="pass">PASS</span>
+                    <span id="info">Pick a score.</span>
+                    <span id="newTurn">New turn.</span>
+                </figure>     
+            </aside>        
+        </section>
+        <section id="rules">
+            <hr>
+            <h2>Yatzy Rules</h2>
+            <article>            
+                <h4>Object of the Game:</h4>
+                Get as many points as possible by rolling five dice with certain combinations.                        
+                The game consists of 13 rounds. In each round, you roll the dice and then 
+                score the roll in one of 13 categories. You must score once in each category. 
+                The score is determined by a different rule for each category.
+                The game ends once all 13 categories have been scored.<br>
+
+                <h4>Game Start:</h4>
+                <li>To start with, roll all the dice. After rolling you can either score the 
+                current roll (see below), or re-roll any or all of the dice.</li>
+                <li>You may only roll the dice a total of 3 times. After rolling 3 times you must 
+                choose a category to score.</li>
+                <li>You may score the dice at any point in the round (it doesn't have to be 
+                after the 3rd roll).</li>
+                <li>In each turn a player may throw the dice up to three times.</li>
+
+                <h4>Scoring:</h4>
+                <li>To score your combination of 5 dice, you choose one of the 13 categories.</li>
+                <li>There are two sections to the score table - the Upper Section and the Lower Section.</li>
+                <li>Once a category has been scored, it cannot be scored again for the rest of the game 
+                (except for the YATZY category).</li>
+
+                <h4>Upper Section Scoring:</h4>
+                <li>If you score in the upper section of the table, your score is the total of the 
+                specified die face.</li>
+                <li>So if you roll: 5 - 2 - 5 - 6 - 5 and score in the Fives category, your total for 
+                the category would be 15, because there are three fives, which are added together.</li>
+                <li>If the total Upper Score is 63 or more, the 35 point BONUS is added.</li>
+
+                <h4>Lower Section Scoring:</h4>
+                <li>In the lower scores, you score either a set amount, or zero if you don't satisfy 
+                the category requirements.</li>
+                <li>3 of Kind - 3 of the same die. Total of all dice.</li>
+                <li>4 of Kind - 4 of the same die. Total of all dice.</li>
+                <li>Full House - 3 of kind and 2 of a kind. 25 points.</li>
+                <li>Small Straight - 4 die in sequential order. 30 points.</li>
+                <li>Large Straight - 5 die in sequential order. 40 points.</li>
+                <li>YATZY - 5 of a kind. 50 points.</li>
+                <li>Chance - optional score category.</li>
+            </article>   
+        </section>         
+    </main>    
+    <footer>
+        <script src="scripts/var.js"></script>
+        <script src="scripts/game.js"></script>
+        <script src="scripts/scores.js"></script>
+        <script src="scripts/display.js"></script>
+        <script src="scripts/main.js"></script>
+    </footer>    
+</body>
+</html>

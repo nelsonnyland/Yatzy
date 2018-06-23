@@ -1,0 +1,28 @@
+Yatzy Project
+Due: June 15th
+50 Points
+Submit by Zip
+
+The goal will be to create a Yahtzee game. An example can be found above.
+Part of this project will be to understand the rules of Yahtzee and then 
+try to implement them in JavaScript/TypeScript.
+
+I will be looking for the minimum functionality listed below:
+- 5 die are present on the page
+- Each die can be held and there is a visual indication of the state 
+  (border around the held die, text of "held", etc.)
+- The die can be rolled, but only non-held die get new values
+- Die values should be 1 - 6 (standard die)
+- The 5 dice values can be applied for points on the standard Yahtzee scorecard
+- Once all spots on the score card are taken, the total amount of points is displayed
+
+Some possible optional enhancements:
+- Make this project object-oriented with a Player and ScoreCard class
+- Provide an animation for dice roll
+- Allow multiple players in a single game
+- Display possible points on the score card for a given dice roll and remaining 
+  score card spots
+
+Resources:
+https://cardgames.io/yahtzee/
+http://www.yahtzee.org.uk/rules.html

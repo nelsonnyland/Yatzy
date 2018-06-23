@@ -1,0 +1,43 @@
+YATZEE RULES
+The objective of YAHTZEE is to get as many points as possible by rolling five 
+dice and getting certain combinations of dice.
+
+Object of the Game:
+> The object of Yahtzee is to obtain the highest score from throwing 5 dice.
+  The game consists of 13 rounds. In each round, you roll the dice and then 
+  score the roll in one of 13 categories. You must score once in each category. 
+  The score is determined by a different rule for each category.
+  The game ends once all 13 categories have been scored.
+
+Game Start:
+> To start with, roll all the dice. After rolling you can either score the 
+  current roll (see below), or re-roll any or all of the dice.
+> You may only roll the dice a total of 3 times. After rolling 3 times you must 
+  choose a category to score.
+> You may score the dice at any point in the round (it doesn't have to be 
+  after the 3rd roll).
+> In each turn a player may throw the dice up to three times.
+
+Scoring:
+> To score your combination of 5 dice, you choose one of the 13 categories.
+> There are two sections to the score table - the Upper Section and the Lower Section.
+> Once a category has been scored, it cannot be scored again for the rest of the game 
+  (except for the YATZY category).
+
+Upper Section Scoring:
+> If you score in the upper section of the table, your score is the total of the 
+  specified die face.
+> So if you roll: 5 - 2 - 5 - 6 - 5 and score in the Fives category, your total for 
+  the category would be 15, because there are three fives, which are added together.
+> If the total Upper Score is 63 or more, the 35 point BONUS is added.
+
+Lower Section Scoring:
+> In the lower scores, you score either a set amount, or zero if you don't satisfy 
+  the category requirements.
+> 3 of Kind - 3 of the same die. Total of all dice.
+> 4 of Kind - 4 of the same die. Total of all dice.
+> Full House - 3 of kind and 2 of a kind. 25 points.
+> Small Straight - 4 die in sequential order. 30 points.
+> Large Straight - 5 die in sequential order. 40 points.
+> YATZY - 5 of a kind. 50 points.
+> Chance - optional score category.
