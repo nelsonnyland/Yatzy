@@ -79,10 +79,10 @@ function selectScore(e) {
             var targetID = e.target.id;
             var t = targetID.substring(1);    
             var currID = j + t;
-            if (selected[t] == 0 &&
+            if (selected[t] == 0 && // unselected
                 targetID == currID) {
                 scorecard[t] = displayCard[t];
-                selected[t] = 1;
+                selected[t] = 1; // selected
                 total(scorecard);
                 Game.clickCount++;
                 displayScore(scorecard, selected);
@@ -130,37 +130,31 @@ function switchTurn() {
  * This function checks the game-over state
  * every time the turn completes.
  */
-function checkGameOver() {
-    // check game over conditions
+function checkGameOver() {   
+    // check game rounds
     if (Game.round == (ROUNDS + 1)) {
         gameOver();
     }
-    var top1 = true;
-    var top2 = true;
+    
+    // check selections
+    var top = true;
     // check top scores
     for (var i = 0; i < 6; i++) {
-        if (ScoreCard1[i] == 0) {
-            top1 = false;
-        }
-        if (ScoreCard2[i] == 0) {
-            top2 = false;
+        if (Selected1[i] == 0 &&
+            Selected2[i] == 0) {
+            top = false;
         }
     }
-    var bot1 = true;
-    var bot2 = true;
+    var bottom = true;
     // check bottom scores
     for (var i = 7; i < 13; i++) {
-        if (ScoreCard1[i] == 0) {
-            bot1 = false;
-        }
-        if (ScoreCard2[i] == 0) {
-            bot2 = false;
+        if (Selected1[i] == 0 &&
+            Selected2[i] == 0) {
+            bottom = false;
         }
     }
-    if (top1 == true &&
-        top2 == true &&
-        bot1 == true &&
-        bot2 == true) {
+    if (top == true &&
+        bottom == true) {
         gameOver();
     }
 }

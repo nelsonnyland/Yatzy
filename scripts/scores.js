@@ -18,7 +18,7 @@ function calcUpper(scorecard, selected) {
     displayCard = scoreCard.slice();
     for (var i = 0; i < Dice.length; i++) {
         for (var j = 0; j < FACES; j++) {        
-            if (selected[j] == 0 &&
+            if (selected[j] == 0 && // unselected
                 currRoll[i] == (j + 1)) {
                 displayCard[j] += (j + 1);
             }
@@ -71,7 +71,7 @@ function calcCurrRollTotal() {
 
 // calculates three of a kind score
 function threeOfKind(scorecard, selected) {
-    if (selected[7] == 0) {
+    if (selected[7] == 0) { // unselected
         for (var i = 0; i < scoreCount.length; i++) {
             if (scoreCount[i] == 2) {
                 displayCard[7] = Game.currRollTotal;
@@ -82,7 +82,7 @@ function threeOfKind(scorecard, selected) {
 
 // calculates four of a kind score
 function fourOfKind(scorecard, selected) {
-    if (selected[8] == 0) {
+    if (selected[8] == 0) { // unselected
         for (var i = 0; i < scoreCount.length; i++) {
             if (scoreCount[i] == 3) {
                 displayCard[8] = Game.currRollTotal;
@@ -95,7 +95,7 @@ function fourOfKind(scorecard, selected) {
 function fullhouse(scorecard, selected) {
     var two = 0;
     var three = 0;
-    if (selected[9] == 0) {
+    if (selected[9] == 0) { // unselected
         for (var i = 0; i < scoreCount.length; i++) {
             if (scoreCount[i] == 1) {
                 two++;
@@ -133,12 +133,12 @@ function straightTest(scorecard, selected, test, j) {
         }            
     } // testing for small straight
     if (count >= 3) {
-        if (selected[10] == 0) {
+        if (selected[10] == 0) { // unselected
             displayCard[10] = SMALLSTRAIGHT;
         }        
     } // testing for large straight
     if (count == 4) {
-        if (selected[11] == 0) {
+        if (selected[11] == 0) { // unselected
             displayCard[11] = LARGESTRAIGHT;
         }        
     }
@@ -156,14 +156,14 @@ function removeDuplicates(test) {
 
 // calculates chance score
 function chance(scorecard, selected) {
-    if (selected[12] == 0) {
+    if (selected[12] == 0) { // unselected
         displayCard[12] = Game.currRollTotal;
     }    
 }
 
 // calculates yatzy score (5 of a kind)
 function yatzy(scorecard, selected) {
-    if (selected[13] == 0) {
+    if (selected[13] == 0) { // unselected
         for (var i = 0; i < scoreCount.length; i++) {
             if (scoreCount[i] == 4) {
                 displayCard[13] = YATZY;
