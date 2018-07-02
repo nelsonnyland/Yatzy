@@ -47,7 +47,7 @@ function displayScore(scorecard, selected) {
         var id = j + i;
         $(id).innerText = scorecard[i];
         if (displayCard[i] != 0 &&
-            selected[i] == 0) {
+            selected[i] == 0) { // unselected
             $(id).innerText = displayCard[i];
         }
     }
@@ -69,13 +69,13 @@ function displayScore(scorecard, selected) {
  */
 function clearFields(selected, j) {
     for (var i = 0; i < 6; i++) {
-        if (selected[i] == 0) {
+        if (selected[i] == 0) { // unselected
             var id = j + i;
             $(id).innerText = "";
         }
     }
     for (var i = 7; i < 14; i++) {
-        if (selected[i] == 0) {
+        if (selected[i] == 0) { // unselected
             var id = j + i;
             $(id).innerText = "";
         }

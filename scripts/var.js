@@ -82,7 +82,11 @@ var ScoreCard2 = scoreCard.slice(); // for player 2
 // scorecard for temporary display purposes
 var displayCard = scoreCard.slice(); 
 
-// scorecards to keep track of the selected scores
+/** 
+ * scorecards to keep track of the selected scores
+ * 1 = selected
+ * 0 = unselected
+ */ 
 var Selected1 = scoreCard.slice(); // for player 1
 var Selected2 = scoreCard.slice(); // for player 2
 
