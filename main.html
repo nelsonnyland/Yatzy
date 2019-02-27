@@ -12,20 +12,20 @@
     <header>
         <h1>YATZY</h1>                
     </header>    
-    <main>
+    <main class="main">
         <p id="count">ROLL: 0 ROUND: 0</p>   
         <span id="gameOver"></span>             
         <section id="container">
             <figure id="active">
-                <figcaption class="caption">Game Table</figcaption>
+                <figcaption class="figcaption caption">Game Table</figcaption>
             </figure>
             <figure id="held">
-                <figcaption class="caption">Held</figcaption>
+                <figcaption class="figcaption caption">Held</figcaption>
             </figure>
             <aside>
                 <figure>
-                    <figcaption>Scorecard</figcaption>
-                    <table>
+                    <figcaption class="figcaption">Scorecard</figcaption>
+                    <table class="table">
                         <thead>
                             <tr>
                                 <th></th>
@@ -115,15 +115,15 @@
                             </tr>
                         </tfoot>
                     </table>
-                    <button type="button" id="roll">Roll Dice</button>                    
+                    <button type="button" id="roll" class="button">Roll Dice</button>                    
                     <span id="pass">PASS</span>
                     <span id="info">Pick a score.</span>
                     <span id="newTurn">New turn.</span>
                 </figure>     
             </aside>        
         </section>
+        <hr>
         <section id="rules">
-            <hr>
             <h2>Yatzy Rules</h2>
             <article>            
                 <h4>Object of the Game:</h4>
@@ -168,7 +168,7 @@
             </article>   
         </section>         
     </main>    
-    <footer>
+    <footer class="footer">
         <script src="scripts/var.js"></script>
         <script src="scripts/game.js"></script>
         <script src="scripts/scores.js"></script>
